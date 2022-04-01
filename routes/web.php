@@ -23,9 +23,15 @@ Route::get('/model', function(){
     // $user->name = 'Usuário Teste';
     // $user->email = 'email@teste.com';
     // $user->password = bcrypt('12345678');
+
     // $user->save();
 
 //    return 
 
-    return \App\User::all();
+    // return \App\User::all(); retorna todos os usuários
+    // return \App\User::find(3); retorna o usuário com base no id
+    // return \App\User::where('name', 'Mr. Jamel Kreiger III')->get(); // select * from users where name = Mr. Jamel Kreiger III
+    // return \App\User::paginate(10): - paginar dados com laravel
+
+    
 });
