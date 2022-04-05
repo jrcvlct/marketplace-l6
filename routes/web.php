@@ -26,7 +26,7 @@ Route::get('/model', function(){
 
     // $user->save();
 
-//    return 
+    //    return 
 
     // return \App\User::all(); retorna todos os usuários
     // return \App\User::find(3); retorna o usuário com base no id
@@ -53,7 +53,7 @@ Route::get('/model', function(){
     //dd($user->store()->count()); //O objeto único (Store) se for collection de dados (objetos)
 
     //Pegar produtos de uma loja?
-//   $loja = \App\Store::find(1);
+    //   $loja = \App\Store::find(1);
     //return $loja->products; | $loja->products()->where('id', 9)->get();
 
     //Pegar as lojas de uma categoria de uma loja?
@@ -106,5 +106,23 @@ Route::get('/model', function(){
     $product = \App\Product::find(49);
 
     return $product->categories;
+});
+
+//Route::get - recupero as coisas
+//Route::post - crio alguma coisa
+//Route::put - atualização
+//Route::patch - atualização
+//Route::delete - remoção
+//Route::options - dentro do http retorna quais cabeçalhos aquela rota especifica ela responde
+
+
+
+Route::prefix('admin')->namespace('admin')->group(function(){
+
+    Route::prefix('stores')->group(function(){
+        Route::get('/', 'Admin\\StoreController@index');
+        Route::get('/create', 'StoreController@create');
+        Route::post('/store', 'StoreController@store');
+    });
     
 });
