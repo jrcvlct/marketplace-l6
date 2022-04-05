@@ -120,7 +120,7 @@ Route::get('/model', function(){
 Route::prefix('admin')->namespace('admin')->group(function(){
 
     Route::prefix('stores')->group(function(){
-        Route::get('/', 'Admin\\StoreController@index');
+        Route::get('/', 'StoreController@index');
         Route::get('/create', 'StoreController@create');
         Route::post('/store', 'StoreController@store');
     });
