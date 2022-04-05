@@ -35,7 +35,7 @@ class User extends Authenticatable
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
-        'name' => 'integer'
+        
     ];
 
     public function store()
