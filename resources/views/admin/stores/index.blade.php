@@ -14,7 +14,10 @@
                 <tr>
                     <td>{{$store->id}}</td>
                     <td>{{$store->name}}</td>
-                    <td></td>
+                    <td>
+                        <a href="{{route('admin.stores.edit', ['store' => $store->id])}}" class="btn btn-sm btn-default">EDITAR</a>
+                        <a href="{{route('admin.stores.destroy', ['store' => $store->id])}}" class="btn btn-sm btn-danger">REMOVER</a>
+                    </td>
                 </tr>
             @endforeach
         </tbody>
