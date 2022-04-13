@@ -14,7 +14,7 @@ return [
     */
 
     'defaults' => [
-        'guard' => 'web',
+        'guard' => 'web', //quem faz o controle
         'passwords' => 'users',
     ],
 
@@ -67,7 +67,7 @@ return [
 
     'providers' => [
         'users' => [
-            'driver' => 'eloquent',
+            'driver' => 'eloquent', //drive padrão é o eloquent, ou seja,vai pegar via models
             'model' => App\User::class,
         ],
 
